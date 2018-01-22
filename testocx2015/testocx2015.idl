@@ -1,0 +1,53 @@
+// testocx2015.idl : ActiveX 控件项目的类型库源。
+
+// 此文件将由 MIDL 编译器工具处理以
+// 产生类型库(testocx2015.tlb)，该类型库将成为
+// testocx2015.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(EEE32163-5EC6-465E-97B6-048AF41F8B34), version(1.0),
+  control ]
+library testocx2015Lib
+{
+	importlib(STDOLE_TLB);
+
+	//  Ctestocx2015Ctrl 的主调度接口
+	[ 
+		uuid(6D6025A9-2A7D-4DD2-9CB4-B6F2780F8357)	
+	]
+	dispinterface _Dtestocx2015
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+			[id(1)] LONG AddFun(LONG param1, LONG param2);
+			[id(2)] LONG SetParameter(BSTR param);
+	};
+
+	//  Ctestocx2015Ctrl 的事件调度接口
+
+	[ 
+		uuid(6185002C-AE47-4BCB-A2D8-5EB40869FDA7)	
+	]
+	dispinterface _Dtestocx2015Events
+	{
+		properties:
+			//  事件接口没有任何属性
+
+		methods:
+	};
+
+	//  Ctestocx2015Ctrl 的类信息
+	[
+		uuid(D1280FBA-3804-4D7C-B91F-99A63C230597)
+	]
+	coclass testocx2015
+	{
+		[default] dispinterface _Dtestocx2015;
+		[default, source] dispinterface _Dtestocx2015Events;
+	};
+
+};

@@ -31,6 +31,7 @@ END_DISPATCH_MAP()
 // 事件映射
 
 BEGIN_EVENT_MAP(Ctestocx2015Ctrl, COleControl)
+	EVENT_CUSTOM_ID("testevent", eventidtestevent, testevent, VTS_I4)
 END_EVENT_MAP()
 
 // 属性页
@@ -160,7 +161,7 @@ LONG Ctestocx2015Ctrl::AddFun(LONG param1, LONG param2)
 	AFX_MANAGE_STATE(AfxGetStaticModuleState());
 
 	// TODO: 在此添加调度处理程序代码
-
+	testevent(param1 + param2);
 	return 0;
 }
 
@@ -180,5 +181,6 @@ int Ctestocx2015Ctrl::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;
 
 	m_dlg.Create(IDD_MAIN_DIALOG, this);
+	testevent(123);
 	return 0;
 }

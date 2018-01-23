@@ -230,6 +230,7 @@
     <ClInclude Include="testocx2015PropPage.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\testocx2015.html" />
     <None Include="testocx2015.def" />
   </ItemGroup>
   <ItemGroup>

@@ -59,5 +59,4 @@ void CMainDlg::OnBnClickedButton1()
 void CMainDlg::OnBnClickedButton2()
 {
 	SetParameter(_T("Button2"), true);
-
 }

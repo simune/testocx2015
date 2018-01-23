@@ -45,6 +45,7 @@ protected:
 // 调度和事件 ID
 public:
 	enum {
+		eventidtestevent = 1L,
 		dispidSetParameter = 2L,
 		dispidAddFun = 1L
 	};
@@ -53,5 +54,10 @@ protected:
 	LONG SetParameter(LPCTSTR param);
 public:
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+
+	void testevent(LONG param1)
+	{
+		FireEvent(eventidtestevent, EVENT_PARAM(VTS_I4), param1);
+	}
 };
 

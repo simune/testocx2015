@@ -61,6 +61,7 @@
     <None Include="testocx2015.def">
       <Filter>源文件</Filter>
     </None>
+    <None Include="..\testocx2015.html" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="testocx2015.rc">

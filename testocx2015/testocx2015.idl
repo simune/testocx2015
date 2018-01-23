@@ -38,6 +38,7 @@ library testocx2015Lib
 			//  事件接口没有任何属性
 
 		methods:
+			[id(1)] void testevent(LONG param1);
 	};
 
 	//  Ctestocx2015Ctrl 的类信息

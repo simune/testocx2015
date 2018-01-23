@@ -1,0 +1,58 @@
+<!-- <html>
+
+<head>
+    <title>Test ActiveX</title>
+
+    <script language="javascript" for="testocx2015" event="testevent(param1)" type="text/javascript"> 
+       function Call(param1) //也可直接写操作代码
+       {
+            alert(param1); //操作代码
+       }
+    </script>
+</head>
+<object id="testocx2015" width="600" height="500" classid="CLSID:D1280FBA-3804-4D7C-B91F-99A63C230597"></object>
+</html> -->
+
+
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <title>TestEvent Example HTML</title>  
+        <meta charset="utf-8">  
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+        <meta name="description" content="">  
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <!-- <script language='javascript' for="testAxEvent" event="testevent(szValue)">  
+        // Test 1 - statically load the script (This is the basis for the hack)  
+        // Works on IE8, IE9, IE10 and IE11  
+            var MSG = document.getElementById("msg");  
+            MSG.innerHTML = szType + " : " + szValue;  
+        </script>   -->
+    </head>  
+    <body>  
+        <table>  
+            <tr>  
+                <td>  
+                    <OBJECT ID='testAxEvent' width="600" height="500" CLASSID='CLSID:D1280FBA-3804-4D7C-B91F-99A63C230597'></OBJECT>  
+                </td>  
+            </tr>  
+            <tr><td  height='30'></td></tr>  
+            <tr>  
+                <td align=center><font size=5><div id='msg'></div></font>   
+            </tr>  
+        </table>  
+    </body>  
+
+    <script>  
+            // Test 2 - attachEvent  
+            // Works on IE8, IE9 and IE10  
+            // Does not work on IE11  
+            function onTestEvent(szValue)  
+            {  
+                var MSG = document.getElementById("msg");  
+                MSG.innerHTML =  " : " + szValue;  
+            }  
+            var elem = document.getElementById("testAxEvent");  
+            elem.attachEvent("testevent", onTestEvent);  
+        </script>  
+</html>  
